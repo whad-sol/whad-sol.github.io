@@ -1,25 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WHAD</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="w_icon.png" type="image/png" />
 </head>
 <body>
-  <canvas id="bg"></canvas>
-  <div id="logo">WHAD</div>
+  <canvas id="stars"></canvas>
 
-  <div id="solPrice"></div>
+  <div class="center">
+    <h1 id="whad">WHAD</h1>
+    <p id="subtitle" class="hidden">what? ... no — WHAD!</p>
+  </div>
 
-  <div id="signature">by Yuggy</div>
-  <button id="dontClick">Don't Click</button>
+  <div class="bottom-right">
+    <p class="yuggy">by Yuggy</p>
+    <button id="dontClick">Don't Click</button>
+  </div>
 
-  <canvas id="coinCanvas"></canvas>
-  <div id="tooLate">TOO LATE.</div>
+  <div id="chart"></div>
+  <div id="tooLate" class="hidden">TOO LATE.</div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
