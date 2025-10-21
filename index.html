@@ -1,42 +1,25 @@
-
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>WHAD</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Permanent+Marker&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WHAD</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="uiTop">
-    <div id="priceCard" title="Live SOL price">
-      <img id="solLogo" alt="SOL logo" src="https://cryptologos.cc/logos/solana-sol-logo.png?v=025" />
-      <div id="solValue" aria-live="polite">—</div>
-    </div>
-    <div id="controls">
-      <button id="dontClick" aria-label="Don't Click">Don't Click</button>
-      <div id="byYuggy">by Yuggy</div>
-    </div>
-  </div>
+  <canvas id="bg"></canvas>
+  <div id="logo">WHAD</div>
 
-  <div id="logoWrap" aria-hidden="false">
-    <div id="logo">WHAD</div>
-    <div id="hoverHint" aria-hidden="true">what?... no — whad.</div>
-  </div>
+  <div id="solPrice"></div>
 
-  <canvas id="bgCanvas"></canvas>
+  <div id="signature">by Yuggy</div>
+  <button id="dontClick">Don't Click</button>
+
   <canvas id="coinCanvas"></canvas>
-  <canvas id="chartCanvas"></canvas>
+  <div id="tooLate">TOO LATE.</div>
 
-  <div id="floatingWords" aria-hidden="true"></div>
-
-  <div id="tooLate" aria-hidden="true">Too Late.</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+
