@@ -6,11 +6,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>WHAD</title>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Permanent+Marker&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-<!-- Favicon as inline SVG -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b0020'/%3E%3Ctext x='50' y='57' font-size='50' font-family='Orbitron, sans-serif' fill='%23E0B0FF' text-anchor='middle' font-weight='700'%3EW%3C/text%3E%3C/svg%3E" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -20,19 +18,24 @@
       <img id="solLogo" alt="SOL logo" src="https://cryptologos.cc/logos/solana-sol-logo.png?v=025" />
       <div id="solValue" aria-live="polite">—</div>
     </div>
-    <a id="discordBtn" href="#" target="_blank" rel="noopener">Join Discord</a>
+    <div id="controls">
+      <button id="dontClick" aria-label="Don't Click">Don't Click</button>
+      <div id="byYuggy">by Yuggy</div>
+    </div>
   </div>
 
-  <div id="logoWrap">
+  <div id="logoWrap" aria-hidden="false">
     <div id="logo">WHAD</div>
+    <div id="hoverHint" aria-hidden="true">what?... no — whad.</div>
   </div>
 
   <canvas id="bgCanvas"></canvas>
   <canvas id="coinCanvas"></canvas>
+  <canvas id="chartCanvas"></canvas>
 
   <div id="floatingWords" aria-hidden="true"></div>
 
-  <div id="signature">by Yuggy</div>
+  <div id="tooLate" aria-hidden="true">Too Late.</div>
 
 <script src="script.js"></script>
 </body>
