@@ -1,28 +1,39 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WHAD</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="w_icon.png" type="image/png" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>WHAD - We Have A Dream</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Favicon as inline SVG -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b0020'/%3E%3Ctext x='50' y='57' font-size='50' font-family='Orbitron, sans-serif' fill='%23E0B0FF' text-anchor='middle' font-weight='700'%3EW%3C/text%3E%3C/svg%3E" />
+
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <canvas id="stars"></canvas>
-
-  <div class="center">
-    <h1 id="whad">WHAD</h1>
-    <p id="subtitle" class="hidden">what? ... no — WHAD!</p>
+  <div id="uiTop">
+    <div id="priceCard" title="Live SOL price">
+      <img id="solLogo" alt="SOL logo" src="https://cryptologos.cc/logos/solana-sol-logo.png?v=025" />
+      <div id="solValue" aria-live="polite">—</div>
+    </div>
+    <a id="discordBtn" href="#" target="_blank" rel="noopener">Join Discord</a>
   </div>
 
-  <div class="bottom-right">
-    <p class="yuggy">by Yuggy</p>
-    <button id="dontClick">Don't Click</button>
+  <div id="logoWrap">
+    <div id="logo">WHAD</div>
   </div>
 
-  <div id="chart"></div>
-  <div id="tooLate" class="hidden">TOO LATE.</div>
+  <canvas id="bgCanvas"></canvas>
+  <canvas id="coinCanvas"></canvas>
 
-  <script src="script.js"></script>
+  <div id="floatingWords" aria-hidden="true"></div>
+
+  <div id="signature">by Yuggy</div>
+
+<script src="script.js"></script>
 </body>
 </html>
