@@ -1,90 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Press+Start+2P&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
-  margin: 0;
-  padding: 0;
   overflow: hidden;
-  font-family: 'Arial', sans-serif;
-  background: radial-gradient(circle at 20% 20%, #150021, #000010 80%);
+  height: 100vh;
+  background: radial-gradient(ellipse at bottom, #0b002b 0%, #000 100%);
   color: white;
+  font-family: 'Orbitron', sans-serif;
 }
 
-#bg {
+canvas#stars {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -2;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
 }
 
-#logo {
+.center {
   position: absolute;
-  top: 40%;
-  left: 50%;
+  top: 45%; left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 6em;
-  color: #b772ff;
-  text-shadow: 0 0 10px #b772ff, 0 0 30px #c56bff, 0 0 60px #a200ff;
-  animation: pulse 3s infinite;
+  text-align: center;
+  z-index: 2;
 }
 
-@keyframes pulse {
-  0%, 100% { text-shadow: 0 0 20px #b772ff; transform: translate(-50%, -50%) scale(1); }
-  50% { text-shadow: 0 0 40px #c56bff; transform: translate(-50%, -50%) scale(1.05); }
+#whad {
+  font-size: 8rem;
+  color: #a020f0;
+  text-shadow: 0 0 20px #a020f0, 0 0 40px #a020f0;
+  animation: breathe 4s ease-in-out infinite;
+  cursor: pointer;
 }
 
-#signature {
+@keyframes breathe {
+  0%, 100% { text-shadow: 0 0 15px #a020f0, 0 0 30px #a020f0; transform: scale(1); }
+  50% { text-shadow: 0 0 30px #a020f0, 0 0 60px #a020f0; transform: scale(1.05); }
+}
+
+#subtitle {
+  font-size: 1.2rem;
+  color: #b06ff2;
+  text-shadow: 0 0 10px #b06ff2;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.bottom-right {
   position: absolute;
-  bottom: 15px;
-  right: 90px;
-  font-family: "Brush Script MT", cursive;
-  color: #c8a2c8;
-  font-size: 1.3em;
-  text-shadow: 0 0 5px #c8a2c8;
+  bottom: 40px; right: 60px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 3;
+}
+
+.yuggy {
+  font-family: 'Press Start 2P', cursive;
+  color: #7fff00;
+  font-size: 0.8rem;
+  text-shadow: 0 0 8px #7fff00;
 }
 
 #dontClick {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
   background: transparent;
-  border: 2px solid #b772ff;
-  color: #b772ff;
+  border: 2px solid #ff00ff;
+  color: #ff00ff;
+  font-size: 0.8rem;
   padding: 8px 14px;
-  border-radius: 50px;
   cursor: pointer;
-  transition: all 0.3s;
-  font-weight: bold;
-}
-#dontClick:hover {
-  background: #b772ff;
-  color: black;
-  box-shadow: 0 0 20px #b772ff;
+  border-radius: 50px;
+  transition: all 0.3s ease;
 }
 
-#coinCanvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+#dontClick:hover {
+  background: #ff00ff;
+  color: black;
+  box-shadow: 0 0 15px #ff00ff;
 }
 
 #tooLate {
-  display: none;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 4em;
-  color: #ff3b3b;
-  text-shadow: 0 0 20px #ff0000, 0 0 40px #b00000;
-  animation: glitch 1.5s infinite;
+  font-size: 3rem;
+  color: red;
+  text-shadow: 0 0 20px red;
+  opacity: 0;
+  z-index: 5;
 }
 
-@keyframes glitch {
-  0% { transform: translate(-50%, -50%) skew(0deg); }
-  20% { transform: translate(-51%, -49%) skew(2deg); }
-  40% { transform: translate(-50%, -50%) skew(-2deg); }
-  60% { transform: translate(-49%, -51%) skew(1deg); }
-  80% { transform: translate(-50%, -50%) skew(0deg); }
-  100% { transform: translate(-50%, -50%) skew(0deg); }
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-10px, 5px); }
+  50% { transform: translate(10px, -5px); }
+  75% { transform: translate(-5px, 10px); }
 }
